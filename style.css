@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+}
+.root{
+    border: 2px solid blue;
+    background-color: #222529;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+}
+.left{
+    background-color: #27262c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >form{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 80%;
+        height: 45%;
+
+        >input, >select, >button, div{
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 6px;
+            outline: none;
+
+            color: #fff;
+            background-color: #ffffff14;
+        }
+        >input::placeholder {
+            color: #ececec;
+            text-decoration: underline;
+        }
+        >input:focus, >select:focus {
+            background-color: #ffffff30;
+            outline: 1px solid #ffe2ff;
+            box-shadow: 0 0 10px #d667d6;
+        }
+        >button{            
+            background-color: #a754a7;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            
+        }
+    }
+}
+form button:hover{ 
+
+    background-image: linear-gradient(to bottom, #00000013, #00000013);
+}
+form button:active{
+    transform: scale(0.98);
+}
+.hide {
+    display: none;
+}
+option {
+    background: #ffffff30 !important;
+    color: black;
+}
+
+
+
+
+.right{
+    background-color: #313131;
+    padding: 1.5% 1%;
+}
+.right table{
+    width: 100%;
+    min-width: 720px;
+}
+table th{
+    color: #e8e8e8;
+    padding-block: 1%;
+}
+table, th, td{
+    border: 1px solid #8590a8;
+    border-collapse: collapse;
+}
+tbody{
+    background-color: #00000018;
+}
+td{
+    color: #cfcfcf;
+    text-align: center;
+    padding-block: 0.5%;
+}
+.optionsCell{
+    height: inherit;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    >button{
+        background: none;
+        border: none;
+        color: #cfcfcf;
+        font-size: 16px;
+        font-weight: 200;
+        margin-inline: 4px;
+        cursor: pointer;
+
+        transition: transform 0.21s ease;
+    }
+}
+.optionsCell>button:first-child:hover{
+    transform: scale(1.1);
+    color: rgb(54, 64, 255)
+}
+.optionsCell>button:last-child:hover{
+    transform: scale(1.1);
+    color: #ff3a3a;
+}
